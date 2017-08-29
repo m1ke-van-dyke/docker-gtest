@@ -7,7 +7,6 @@ RUN apt-get update && \
                         gcc \
                         python \
                         gcovr \
-                        wget \
                     && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
