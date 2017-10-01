@@ -7,6 +7,7 @@ RUN apt-get update && \
                         gcc \
                         python \
                         gcovr \
+                        valgrind \
                     && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -15,3 +16,10 @@ RUN git clone -q https://github.com/google/googletest.git /googletest \
   && cd /googletest/build \
   && cmake .. && make && make install \
   && cd / && rm -rf /googletest
+  
+  
+RUN git clone -q https://github.com/google/benchmark.git /benchmark \
+  && mkdir -p /benchmark/build \
+  && cd /benchmark/build \
+  && cmake .. && make && make install \
+  && cd / && rm -rf /benchmark
