@@ -15,7 +15,7 @@ RUN apt-get update && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN git clone -q https://github.com/google/googletest.git /googletest \
-  && cd googleest \
+  && cd googletest \
   && git checkout tags/v1.3.0 \
   && mkdir -p /googletest/build \
   && cd /googletest/build \
