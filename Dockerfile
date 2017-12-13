@@ -16,7 +16,7 @@ apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN git clone -q https://github.com/google/googletest.git /googletest \
   && cd googletest \
-  && git checkout tags/v1.3.0 \
+  && git checkout tags/release-1.8.0 \
   && mkdir -p /googletest/build \
   && cd /googletest/build \
   && cmake .. && make && make install \
