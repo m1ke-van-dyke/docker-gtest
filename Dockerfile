@@ -11,6 +11,7 @@ RUN apt-get update && \
                         gdb \
                         lshw \
                         clang \
+                        tbb \
                     && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
