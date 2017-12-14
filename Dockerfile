@@ -11,7 +11,7 @@ RUN apt-get update && \
                         gdb \
                         lshw \
                         clang \
-                        libtbb2 \
+                        libtbb-dev \
                     && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
