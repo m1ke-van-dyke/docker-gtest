@@ -26,7 +26,7 @@ RUN git clone -q https://github.com/google/googletest.git /googletest \
   
 RUN git clone -q https://github.com/google/benchmark.git /benchmark \
   && cd benchmark \
-  && git checkout tags/v1.2.0 \
+  && git checkout tags/v1.3.0 \
   && mkdir -p /benchmark/build \
   && cd /benchmark/build \
   && cmake -DCMAKE_BUILD_TYPE=Release .. && make && make install \
