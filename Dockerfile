@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:latest
 
 RUN apt-get update && \
     apt-get install -y build-essential \
@@ -8,8 +8,6 @@ RUN apt-get update && \
                         python \
                         gcovr \
                         valgrind \
-                        gdb \
-                        lshw \
                         clang \
                         libtbb-dev \
                     && \
