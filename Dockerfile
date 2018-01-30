@@ -7,16 +7,14 @@ RUN apt-get update && \
                         gcc \
                         python \
                         lshw \
-		            	llvm-5.0 \
-            			llvm-5.0-tools \
+		        llvm-5.0 \
+            		llvm-5.0-tools \
                         clang-5.0 \
-                        libtbb-dev #\
-#                    && \
-#apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+                        libtbb-dev
 
-RUN update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-5.0 100 \
-    update-alternatives --install /usr/bin/clang clang /usr/bin/clang-5.0 100 \
-    update-alternatives --install /usr/bin/llvm-cov llvm-cov /usr/bin/llvm-cov-5.0 100 \
+RUN update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-5.0 100 && \
+    update-alternatives --install /usr/bin/clang clang /usr/bin/clang-5.0 100 && \
+    update-alternatives --install /usr/bin/llvm-cov llvm-cov /usr/bin/llvm-cov-5.0 100 && \
     update-alternatives --install /usr/bin/llvm-profdata llvm-profdata /usr/bin/llvm-profdata-5.0 100
 
 RUN git clone -q https://github.com/google/googletest.git /googletest \
