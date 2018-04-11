@@ -7,8 +7,8 @@ RUN apt-get update && \
                         gcc \
                         python \
                         lshw \
-		        llvm-5.0 \
-            		llvm-5.0-tools \
+		        		llvm-5.0 \
+            			llvm-5.0-tools \
                         clang-5.0 \
                         libtbb-dev
 
