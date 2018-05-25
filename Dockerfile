@@ -10,7 +10,8 @@ RUN apt-get update && \
 		        		llvm-5.0 \
             			llvm-5.0-tools \
                         clang-5.0 \
-                        libtbb-dev
+                        libtbb-dev \
+			wget
 
 RUN update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-5.0 100 && \
     update-alternatives --install /usr/bin/clang clang /usr/bin/clang-5.0 100 && \
