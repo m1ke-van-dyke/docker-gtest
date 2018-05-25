@@ -33,3 +33,10 @@ RUN git clone -q https://github.com/google/benchmark.git /benchmark \
   && cd /benchmark/build \
   && cmake -DCMAKE_BUILD_TYPE=Release .. && make && make install \
   && cd / && rm -rf /benchmark
+
+
+WORKDIR home/tools/bazel
+RUN wget -q https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh && \
+    chmod +x bazel-0.13.0-installer-linux-x86_64.sh && \
+    ./bazel-0.13.0-installer-linux-x86_64.sh && \
+rm -f bazel-0.13.0-installer-linux-x86_64.sh
