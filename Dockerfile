@@ -16,7 +16,7 @@ RUN apt-get update && \
                         unzip \
                         zip \
                         pkg-config \
-			zlib1g-dev \
+			zlib1g-dev
 
 RUN update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-5.0 100 && \
     update-alternatives --install /usr/bin/clang clang /usr/bin/clang-5.0 100 && \
